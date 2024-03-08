@@ -231,7 +231,8 @@ router = Router(
             ('youdao', service.Youdao),
             ('forvo', service.Forvo),
             ('vocalware', service.VocalWare),
-            ('watson', service.Watson)
+            ('watson', service.Watson),
+            ('URLDownloader', service.URLDownloader),
         ],
         dead=dict(
             ttsapicom="TTS-API.com has gone offline and can no longer be "

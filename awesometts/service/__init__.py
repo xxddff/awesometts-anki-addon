@@ -53,6 +53,7 @@ from .youdao import Youdao
 from .forvo import Forvo
 from .vocalware import VocalWare
 from .watson import Watson
+from .urldownloader import URLDownloader
 
 __all__ = [
     # common
@@ -87,5 +88,6 @@ __all__ = [
     'Youdao',
     'Forvo',
     'VocalWare',
-    'Watson'
+    'Watson',
+    'urldownloader.py'
 ]
