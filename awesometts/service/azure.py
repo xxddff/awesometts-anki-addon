@@ -184,8 +184,28 @@ class Azure(Service):
             return True
         return False
 
+    # 定义函数，用于去除影响发音的符号，比如html标签，◉，❶，❷，❸，❹，❺，❻，❼，❽，❾，等
+    def remove_influence(self, text):
+        text = text.replace('<br>', '')
+        text = text.replace('<br/>', '')
+        text = text.replace('<br />', '')
+        text = text.replace('◉', '')
+        text = text.replace('❶', '')
+        text = text.replace('❷', '')
+        text = text.replace('❸', '')
+        text = text.replace('❹', '')
+        text = text.replace('❺', '')
+        text = text.replace('❻', '')
+        text = text.replace('❼', '')
+        text = text.replace('❽', '')
+        text = text.replace('❾', '')
+        return text
+
     def run(self, text, options, path):
         """Downloads from Azure API directly to an MP3."""
+
+        # 去除影响发音的符号
+        text = self.remove_influence(text)
 
         voice_key = options['voice']
         voice = self.get_voice_for_key(voice_key)
