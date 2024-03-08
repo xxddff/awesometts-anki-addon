@@ -13,7 +13,7 @@ git push origin ${GIT_TAG}
 tools/package.sh ~/anki-addons-releases/AwesomeTTS-${GIT_TAG}.ankiaddon
 
 # sync 
-rclone sync ~/anki-addons-releases/ dropbox:Anki/anki-addons-releases/
+#rclone sync ~/anki-addons-releases/ dropbox:Anki/anki-addons-releases/
 
 # if you need to undo a release:
 # git tag -d v0.2
