@@ -199,6 +199,15 @@ class Azure(Service):
         text = text.replace('❼', '')
         text = text.replace('❽', '')
         text = text.replace('❾', '')
+        text = text.replace('①', '')
+        text = text.replace('②', '')
+        text = text.replace('③', '')
+        text = text.replace('④', '')
+        text = text.replace('⑤', '')
+        text = text.replace('⑥', '')
+        text = text.replace('⑦', '')
+        text = text.replace('⑧', '')
+        text = text.replace('⑨', '')
         return text
 
     def run(self, text, options, path):
